@@ -1,4 +1,4 @@
-    <pricingRules version="1">
+    <pricingRules version="2">
       <state code="NSW" otherFees="2200" mortgageRegFee="175.70" mortgageDischargeFee="175.70" transferFee="175.70" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (shared equity, open Dec 2025). First Home Super Saver Scheme (FHSS up to $50k). No foreign buyer surcharge waiver.">
         <standard>
           <bracket lower="0" upper="17000" base="0" rate="0.0125" />
