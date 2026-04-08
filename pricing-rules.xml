@@ -1,0 +1,137 @@
+    <pricingRules version="4">
+      <state code="NSW" otherFees="2200" mortgageRegFee="175.70" mortgageDischargeFee="175.70" transferFee="175.70" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (shared equity, open Dec 2025). First Home Super Saver Scheme (FHSS up to $50k). No foreign buyer surcharge waiver.">
+        <standard>
+          <bracket lower="0" upper="17000" base="0" rate="0.0125" />
+          <bracket lower="17000" upper="37000" base="212" rate="0.015" />
+          <bracket lower="37000" upper="99000" base="512" rate="0.0175" />
+          <bracket lower="99000" upper="372000" base="1597" rate="0.035" />
+          <bracket lower="372000" upper="1240000" base="11152" rate="0.045" />
+          <bracket lower="1240000" upper="3721000" base="50212" rate="0.055" />
+          <bracket lower="3721000" base="186667" rate="0.07" />
+        </standard>
+        <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="800000" taperTo="1000000" uncappedForNewBuild="false" summaryLabel="FHBAS: $0 duty ≤ $800 000, taper to $1 000 000" noteFull="First Home Buyers Assistance Scheme — full transfer duty exemption (property ≤ $800 000)." noteTaper="First Home Buyers Assistance Scheme — concessional transfer duty applies ($800 001–$1 000 000)." noteNone="No FHBAS concession (property > $1 000 000). Standard transfer duty applies." />
+        <grants>
+          <grant name="NSW FHOG" amount="10000" appliesTo="newBuild,vacantLand" newBuildPropertyCap="600000" vacantLandPropertyCap="750000" notes="$10 000 for a newly built or substantially renovated home up to $600,000, or for vacant land plus an eligible building contract up to $750,000. Vacant land eligibility depends on the combined land-and-build cost, so treat the app result as an estimate only." />
+        </grants>
+      </state>
+      <state code="VIC" otherFees="2520" mortgageRegFee="125.70" mortgageDischargeFee="125.70" transferFee="220" mortgageFeeNotes="Paper fee is $135.80. Electronic mortgage registration and discharge fees are treated here as $125.70 each." federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. Off-the-plan concession for all buyers until 20 Oct 2026.">
+        <standard>
+          <bracket lower="0" upper="25000" base="0" rate="0.014" />
+          <bracket lower="25000" upper="130000" base="350" rate="0.024" />
+          <bracket lower="130000" upper="960000" base="2870" rate="0.06" />
+          <bracket lower="960000" upper="2000000" base="0" rate="0.055" />
+          <bracket lower="2000000" base="110000" rate="0.065" />
+        </standard>
+        <ppr>
+          <bracket lower="0" upper="25000" base="0" rate="0.014" />
+          <bracket lower="25000" upper="130000" base="350" rate="0.024" />
+          <bracket lower="130000" upper="440000" base="2870" rate="0.05" />
+          <bracket lower="440000" upper="550000" base="18370" rate="0.06" />
+          <bracket lower="550000" upper="960000" base="28070" rate="0.06" />
+          <bracket lower="960000" upper="2000000" base="0" rate="0.055" />
+          <bracket lower="2000000" base="110000" rate="0.065" />
+        </ppr>
+        <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="600000" taperTo="750000" uncappedForNewBuild="false" summaryLabel="FHB: $0 duty ≤ $600 000, taper to $750 000" noteFull="First Home Buyer exemption — $0 land transfer duty (property ≤ $600 000)." noteTaper="First Home Buyer concession — concessional (sliding scale) duty applies ($600 001–$750 000)." noteNone="No First Home Buyer concession (property > $750 000). Standard duty applies." />
+        <grants>
+          <grant name="Victorian FHOG" amount="10000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$10 000 for new homes ≤ $750 000. Must never have previously owned residential property in Australia. Occupy as PPR within 12 months for at least 12 continuous months." />
+        </grants>
+      </state>
+      <state code="QLD" otherFees="2200" mortgageRegFee="238.14" mortgageDischargeFee="238.14" transferFee="238.14" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. QLD Boost to Buy (state shared equity — check qld.gov.au for current status).">
+        <standard>
+          <bracket lower="0" upper="5000" base="0" rate="0" />
+          <bracket lower="5000" upper="75000" base="0" rate="0.015" />
+          <bracket lower="75000" upper="540000" base="1050" rate="0.035" />
+          <bracket lower="540000" upper="1000000" base="17325" rate="0.045" />
+          <bracket lower="1000000" base="38025" rate="0.0575" />
+        </standard>
+        <ppr>
+          <bracket lower="0" upper="350000" base="0" rate="0.01" />
+          <bracket lower="350000" upper="540000" base="3500" rate="0.035" />
+          <bracket lower="540000" upper="1000000" base="10150" rate="0.045" />
+          <bracket lower="1000000" base="30850" rate="0.0575" />
+        </ppr>
+        <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="700000" taperTo="800000" uncappedExemptionTypes="newBuild" vacantLandFullExemptionUpTo="400000" vacantLandTaperTo="400000" summaryLabel="QLD: established full exemption to $700k, taper to $800k; new build nil duty regardless of value; vacant land exemption under $400k." noteFull="Queensland First Home concession or exemption applies." noteTaper="Queensland First Home concession applies on a partial basis." noteNone="No Queensland First Home concession applies for this property value or property type." />
+        <grants>
+          <grant name="QLD FHOG (Metro)" amount="15000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$15 000 for new homes in Brisbane metro and Peel regions. Extended to 30 June 2026. Property must never have been occupied or sold as a place of residence." />
+          <grant name="QLD FHOG (Regional)" amount="30000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$30 000 for new homes in regional Queensland (outside metro/Peel). Extended to 30 June 2026 as confirmed by QLD Revenue Office in late 2025." />
+        </grants>
+      </state>
+      <state code="WA" otherFees="2200" mortgageRegFee="216.60" mortgageDischargeFee="216.60" transferFee="216.60" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. WA has a 7% foreign buyer surcharge.">
+        <standard>
+          <bracket lower="0" upper="120000" base="0" rate="0.019" />
+          <bracket lower="120000" upper="150000" base="2280" rate="0.0285" />
+          <bracket lower="150000" upper="360000" base="3135" rate="0.038" />
+          <bracket lower="360000" upper="725000" base="11115" rate="0.0475" />
+          <bracket lower="725000" base="28453" rate="0.0515" />
+        </standard>
+        <ppr>
+          <bracket lower="0" upper="120000" base="0" rate="0.015" />
+          <bracket lower="120000" upper="200000" base="1800" rate="0.0404" />
+        </ppr>
+        <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="500000" taperTo="600000" uncappedForNewBuild="false" summaryLabel="FHB: $0 duty ≤ $500 000 (updated Mar 2025), taper to $600 000" noteFull="First Home Owner — full transfer duty exemption (property ≤ $500 000)." noteTaper="First Home Owner — concessional transfer duty (sliding scale, $500 001–$600 000)." noteNone="No First Home Buyer exemption (property > $600 000). Standard or residential concession duty applies." />
+        <grants>
+          <grant name="WA FHOG" amount="10000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$10 000 for new homes south of the 26th parallel (≤ $750 000). $10 000 for new homes north of the 26th parallel (≤ $1 000 000). Only new or substantially renovated homes qualify. Must occupy as PPR within 12 months for at least 6 months." />
+        </grants>
+      </state>
+      <state code="SA" otherFees="2200" mortgageRegFee="198.00" mortgageDischargeFee="198.00" transferFee="198" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. SA has a 7% foreign buyer surcharge (from 1 Jan 2016).">
+        <standard>
+          <bracket lower="0" upper="12000" base="0" rate="0.01" />
+          <bracket lower="12000" upper="30000" base="120" rate="0.02" />
+          <bracket lower="30000" upper="50000" base="480" rate="0.03" />
+          <bracket lower="50000" upper="100000" base="1080" rate="0.035" />
+          <bracket lower="100000" upper="200000" base="2830" rate="0.04" />
+          <bracket lower="200000" upper="250000" base="6830" rate="0.0425" />
+          <bracket lower="250000" upper="300000" base="8955" rate="0.0475" />
+          <bracket lower="300000" upper="500000" base="11330" rate="0.05" />
+          <bracket lower="500000" base="21330" rate="0.055" />
+        </standard>
+        <firstHomeBuyer appliesTo="newBuild,vacantLand" fullExemptionUpTo="0" taperTo="0" uncappedForNewBuild="true" summaryLabel="FHB: $0 duty for NEW homes only — no price cap. No concession for established homes." noteFull="SA First Home Buyer stamp duty exemption — $0 duty on new home or vacant land (no price cap, from 6 June 2024)." noteTaper="SA First Home Buyer — partial concession does not apply in SA." noteNone="SA provides NO stamp duty concession on established homes. Full duty applies regardless of buyer status." />
+        <grants>
+          <grant name="SA FHOG" amount="15000" appliesTo="newBuild,vacantLand" propertyCap="-1" notes="$15 000 for new homes — NO property value cap (from 6 June 2024). Must never have owned residential property in Australia. Occupy as PPR for at least 6 continuous months commencing within 12 months of settlement. A propertyCap of -1 indicates no cap." />
+        </grants>
+      </state>
+      <state code="TAS" otherFees="2200" mortgageRegFee="163.30" mortgageDischargeFee="202.46" transferFee="250.21" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. Tasmania has an 8% foreign investor surcharge.">
+        <standard>
+          <bracket lower="0" upper="3000" base="50" rate="0" />
+          <bracket lower="3000" upper="25000" base="50" rate="0.0175" />
+          <bracket lower="25000" upper="75000" base="435" rate="0.0225" />
+          <bracket lower="75000" upper="200000" base="1560" rate="0.035" />
+          <bracket lower="200000" upper="375000" base="5935" rate="0.04" />
+          <bracket lower="375000" upper="725000" base="12935" rate="0.0425" />
+          <bracket lower="725000" base="27810" rate="0.045" />
+        </standard>
+        <firstHomeBuyer appliesTo="established" fullExemptionUpTo="750000" taperTo="750000" validFrom="2024-02-18" validUntil="2026-06-30" summaryLabel="FHB: 100% exemption on established homes ≤ $750 000 between 18 Feb 2024 and 30 Jun 2026." noteFull="Tasmania established-home duty exemption applies: $0 duty for an eligible first home buyer purchasing an established home valued at $750,000 or less, settling between 18 February 2024 and 30 June 2026." noteTaper="Tasmania established-home duty relief has no taper. Above $750,000, full standard duty applies." noteNone="No Tasmania established-home duty exemption applies for this property value or date." />
+        <grants>
+          <grant name="TAS FHOG ($30k)" amount="30000" appliesTo="newBuild,vacantLand" propertyCap="-1" validFrom="2021-04-01" validUntil="2024-06-30" notes="$30,000 for eligible new-home transactions commenced between 1 April 2021 and 30 June 2024. Applies to a new home, off-the-plan home, or eligible build transaction. Must satisfy Tasmania First Home Owner Grant eligibility rules." />
+          <grant name="TAS FHOG ($10k transitional)" amount="10000" appliesTo="newBuild,vacantLand" propertyCap="-1" validFrom="2024-07-01" validUntil="2025-06-30" notes="$10,000 for eligible new-home transactions commenced between 1 July 2024 and 30 June 2025. This transitional period does not require the higher $30,000-specific building criteria." />
+          <grant name="TAS FHOG ($30k current)" amount="30000" appliesTo="newBuild,vacantLand" propertyCap="-1" validFrom="2025-07-01" validUntil="2026-06-30" notes="$30,000 for eligible new-home transactions commenced between 1 July 2025 and 30 June 2026. Applies to a new home, off-the-plan home, or eligible build transaction and must satisfy Tasmania First Home Owner Grant eligibility rules." />
+        </grants>
+      </state>
+      <state code="ACT" otherFees="2200" mortgageRegFee="178.00" mortgageDischargeFee="178.00" transferFee="479" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. ACT has NO foreign buyer surcharge. Duty paid 14 days after registration (not at settlement).">
+        <standard>
+          <bracket lower="0" upper="260000" base="0" rate="0.0028" />
+          <bracket lower="260000" upper="300000" base="728" rate="0.0277" />
+          <bracket lower="300000" upper="500000" base="1836" rate="0.0348" />
+          <bracket lower="500000" upper="750000" base="8796" rate="0.0376" />
+          <bracket lower="750000" upper="1000000" base="18196" rate="0.043" />
+          <bracket lower="1000000" upper="1455000" base="28946" rate="0.054" />
+          <bracket lower="1455000" base="0" rate="0.0454" />
+        </standard>
+        <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="1020000" taperTo="1455000" uncappedForNewBuild="false" summaryLabel="HBCS: $0 duty ≤ $1 020 000 (income test; no property in last 5 yrs); partial concession to $1 455 000" noteFull="ACT Home Buyer Concession Scheme — $0 conveyance duty (≤ $1 020 000). Income test applies (household taxable income limit); must not have owned property in last 5 years. Check revenue.act.gov.au for current income thresholds." noteTaper="ACT Home Buyer Concession Scheme — partial concession applies ($1 020 001–$1 455 000, max saving $35 238). Income and ownership tests apply." noteNone="ACT HBCS does not apply (property > $1 455 000 or eligibility criteria not met). Standard conveyance duty payable." />
+        <grants>
+          <grant name="ACT HBCS (informational only)" amount="0" appliesTo="established,newBuild,vacantLand" propertyCap="1455000" notes="ACT no longer has a cash First Home Owner Grant. The Home Buyer Concession Scheme is already modeled in the duty calculation and should not be added as a separate cash grant." />
+        </grants>
+      </state>
+      <state code="NT" otherFees="2200" mortgageRegFee="176.00" mortgageDischargeFee="176.00" transferFee="176" mortgageFeeNotes="Add $69.00 for each additional title on registration or discharge." federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. NT has NO foreign buyer surcharge. HomeGrown Territory Grant $50 000 replaces FHOG from Oct 2024.">
+        <standard>
+          <bracket lower="0" upper="525000" base="0" rate="0" />
+          <bracket lower="525000" upper="3000000" base="26730" rate="0.0495" />
+          <bracket lower="3000000" base="149980" rate="0.0595" />
+        </standard>
+        <grants>
+          <grant name="HomeGrown Territory Grant (Established Home)" amount="10000" appliesTo="established" propertyCap="600000" validUntil="2025-09-30" notes="$10,000 for eligible first home buyers purchasing an established home. This established-home payment ends on 30 September 2025. Occupy as principal place of residence within 12 months and satisfy NT Treasury eligibility rules." />
+          <grant name="HomeGrown Territory Grant (New Home)" amount="50000" appliesTo="newBuild,vacantLand" propertyCap="-1" validUntil="2026-09-30" notes="$50,000 for eligible first home buyers buying or building a new home in the NT under HomeGrown Territory. Current scheme dates run to 30 September 2026." />
+          <grant name="House and Land Package Exemption" amount="0" appliesTo="newBuild" propertyCap="-1" validUntil="2027-06-30" notes="Separate NT house-and-land package exemption that can provide full stamp duty relief for eligible package purchases until 30 June 2027. Check NT Treasury eligibility rules before relying on it." />
+        </grants>
+      </state>
+    </pricingRules>
