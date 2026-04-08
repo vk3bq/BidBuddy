@@ -52,8 +52,7 @@
         </ppr>
         <firstHomeBuyer appliesTo="established,newBuild,vacantLand" fullExemptionUpTo="700000" taperTo="800000" uncappedExemptionTypes="newBuild" vacantLandFullExemptionUpTo="400000" vacantLandTaperTo="400000" summaryLabel="QLD: established full exemption to $700k, taper to $800k; new build nil duty regardless of value; vacant land exemption under $400k." noteFull="Queensland First Home concession or exemption applies." noteTaper="Queensland First Home concession applies on a partial basis." noteNone="No Queensland First Home concession applies for this property value or property type." />
         <grants>
-          <grant name="QLD FHOG (Metro)" amount="15000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$15 000 for new homes in Brisbane metro and Peel regions. Extended to 30 June 2026. Property must never have been occupied or sold as a place of residence." />
-          <grant name="QLD FHOG (Regional)" amount="30000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$30 000 for new homes in regional Queensland (outside metro/Peel). Extended to 30 June 2026 as confirmed by QLD Revenue Office in late 2025." />
+          <grant name="QLD FHOG" amount="25000" appliesTo="newBuild,vacantLand" propertyCap="750000" notes="$25 000 for an eligible new home transaction under the Queensland First Home Owner Grant rules. Build-contract and new-home eligibility conditions still apply, so treat this result as an estimate until confirmed with QRO." />
         </grants>
       </state>
       <state code="WA" otherFees="2200" mortgageRegFee="216.60" mortgageDischargeFee="216.60" transferFee="216.60" mortgageFeeNotes="" federalNotes="First Home Guarantee (5% deposit, no LMI — uncapped from Oct 2025). Help to Buy (open Dec 2025). FHSS up to $50k. WA has a 7% foreign buyer surcharge.">
