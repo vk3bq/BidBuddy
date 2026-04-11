@@ -42,6 +42,15 @@
       padding: 24px;
       margin-top: 20px;
     }
+    .brand {
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
+      display: block;
+      margin: 0 auto 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
     h1, h2 {
       line-height: 1.2;
       margin: 0 0 12px;
@@ -61,21 +70,46 @@
       color: var(--muted);
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      var label = document.querySelector("[data-last-updated]");
+      if (!label) return;
+
+      try {
+        var response = await fetch("pricing-rules.xml", { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to load pricing rules");
+
+        var xmlText = await response.text();
+        var xml = new DOMParser().parseFromString(xmlText, "application/xml");
+        var lastReviewed = xml.documentElement.getAttribute("lastReviewed");
+
+        if (lastReviewed) {
+          label.textContent = lastReviewed;
+          return;
+        }
+      } catch (error) {
+        console.warn("Unable to load pricing-rules.xml review date", error);
+      }
+
+      label.textContent = "April 2026";
+    });
+  </script>
 </head>
 <body>
   <main>
     <div class="card">
+      <img class="brand" src="BidBuddyBear1.png" alt="BidBuddy bear logo">
       <h1>BidBuddy Privacy Policy</h1>
-      <p class="muted">Last updated: 08/04/2026</p>
+      <p class="muted">Last updated: <span data-last-updated>April 2026</span></p>
       <p class="muted">Bid with Confidence</p>
 
-      <p>BidBuddy is an Australian residential property planning app.</p>
+      <p>BidBuddy is an Australian property buying and auction bidding assistant. Estimates are based on the state or territory where the property is located.</p>
 
       <h2>Summary</h2>
       <p>Saved properties, notes, listing URLs, settings, photos, and locally stored diagnostics stay on your device unless you delete them.</p>
 
       <h2>What BidBuddy Stores</h2>
-      <p>BidBuddy stores saved properties, notes, listing URLs, app settings, and any property photos you add locally on your device so you can manage calculations and saved properties.</p>
+      <p>BidBuddy stores saved properties, notes, listing URLs, app settings, and any property photos you add locally on your device so you can manage calculations and saved listings.</p>
 
       <h2>What BidBuddy Does Not Do</h2>
       <p>BidBuddy does not use accounts, cloud sync, or a BidBuddy-managed backend for your saved property data. BidBuddy does not upload your saved properties, notes, or photos to a server managed by the app, and it does not sell your personal information.</p>
@@ -90,7 +124,7 @@
       <p>Your saved properties, notes, photos, and locally stored diagnostics remain on your device until you delete them in BidBuddy or remove the app from your device. Deleting a saved property in BidBuddy also removes its saved photos.</p>
 
       <h2>Pricing Rules Updates</h2>
-      <p>BidBuddy uses bundled pricing rules included with the app. Pricing rules are updated through new app versions rather than remote downloads.</p>
+      <p>BidBuddy uses bundled pricing rules included with the app. Those pricing rules cover Australian states and territories and include state-based duties, fees, concessions, grants, and eligibility settings. They are updated through new app versions rather than remote downloads.</p>
     </div>
   </main>
 </body>

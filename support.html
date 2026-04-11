@@ -47,6 +47,16 @@
       margin-top: 20px;
     }
 
+    .brand {
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
+      display: block;
+      margin: 0 auto 16px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
     h1, h2 {
       line-height: 1.2;
       margin: 0 0 12px;
@@ -86,15 +96,40 @@
       border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border));
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      var label = document.querySelector("[data-last-updated]");
+      if (!label) return;
+
+      try {
+        var response = await fetch("pricing-rules.xml", { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to load pricing rules");
+
+        var xmlText = await response.text();
+        var xml = new DOMParser().parseFromString(xmlText, "application/xml");
+        var lastReviewed = xml.documentElement.getAttribute("lastReviewed");
+
+        if (lastReviewed) {
+          label.textContent = lastReviewed;
+          return;
+        }
+      } catch (error) {
+        console.warn("Unable to load pricing-rules.xml review date", error);
+      }
+
+      label.textContent = "April 2026";
+    });
+  </script>
 </head>
 <body>
   <main>
     <div class="card">
+      <img class="brand" src="BidBuddyBear1.png" alt="BidBuddy bear logo">
       <h1>BidBuddy Support</h1>
-      <p class="muted">Last updated: 08/04/2026</p>
+      <p class="muted">Last updated: <span data-last-updated>April 2026</span></p>
       <p class="muted">Bid with Confidence</p>
 
-      <p>BidBuddy is an Australian residential property planning app.</p>
+      <p>BidBuddy is an Australian property buying and auction bidding assistant. Estimates are based on the state or territory where the property is located.</p>
 
       <h2>Contact</h2>
       <p>Email: <a href="mailto:asphotos@me.com">asphotos@me.com</a></p>
@@ -112,15 +147,15 @@
 
       <h2>Common Topics</h2>
       <ul>
-        <li>pricing estimates and state-based fee calculations</li>
-        <li>auction presets, bid tracking, and auction history</li>
+        <li>budget guides, state-based duties, fees, concessions, grants, and estimated total cost calculations</li>
+        <li>auction presets, live bid tracking against budget, and auction history</li>
         <li>saved properties, notes, and photos</li>
         <li>listing links, address lookup, and map actions</li>
       </ul>
 
       <h2>Legal &amp; Estimate Notes</h2>
-      <p>BidBuddy provides general information and estimates only for Australian residential property planning. It does not take into account your personal objectives, financial situation, or needs, and it is not financial, legal, tax, or lending advice.</p>
-      <p>All estimates are approximate. Please confirm duties, fees, grants, surcharges, eligibility, and total costs with the relevant Australian authority and a qualified adviser before you bid or buy.</p>
+      <p>BidBuddy provides general information and estimates only for Australian property buying and auction bidding. It does not take into account your personal objectives, financial situation, or needs, and it is not financial, legal, tax, or lending advice.</p>
+      <p>All estimates are approximate. Please confirm duties, fees, concessions, grants, eligibility, and total costs with the relevant Australian authority and a qualified adviser before you bid or buy.</p>
 
       <h2>Privacy</h2>
       <p>BidBuddy stores saved properties, notes, listing URLs, settings, photos, and locally stored diagnostics on your device. Read the full privacy policy here:</p>
